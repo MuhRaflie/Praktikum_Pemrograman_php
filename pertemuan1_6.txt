@@ -1,0 +1,25 @@
+Alur MVC untuk situs.com/mahasiswa/index:
+
+Browser mengirimkan request ke URL situs.com/mahasiswa/index.
+
+Front Controller (index.php) menerima request dan memanggil Router.
+
+Router memecah URL menjadi:
+
+Controller: Mahasiswa
+
+Method: index
+
+Parameter: (tidak ada)
+
+Router memuat file MahasiswaController.php dan membuat objek MahasiswaController.
+
+MahasiswaController memanggil Model (MahasiswaModel) untuk mengambil data daftar mahasiswa dari database.
+
+MahasiswaModel mengembalikan data mahasiswa ke Controller.
+
+Controller memuat View (mahasiswa/index.php) dan mengirimkan data mahasiswa.
+
+View menampilkan halaman HTML dengan daftar mahasiswa.
+
+Response dikirim kembali ke Browser.
