@@ -1,0 +1,17 @@
+# ----------------------------------------------------
+# Mengaktifkan Rewrite Engine
+# ----------------------------------------------------
+Options -Indexes
+Options +FollowSymlinks
+RewriteEngine On
+
+# ----------------------------------------------------
+# Jika file/folder yang diminta ada, jangan rewrite
+# ----------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ----------------------------------------------------
+# Arahkan semua request ke index.php
+# ----------------------------------------------------
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
